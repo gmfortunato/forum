@@ -1,9 +1,15 @@
-<meta name="csrf-token" content="{{ csrf_token() }}">
+@extends('layouts.default')
 
-<div id="app">
-    <example>
+@section('content')
+<div class="container">
+    <h3>{{ __('Most recent threads') }}</h3>
+    <threads>
         Carregando
-    </example>
-</div>
+    </threads>
 
-<script src="/js/app.js"></script>
+</div>
+@endsection
+
+@section('scripts')
+    <script src="/js/threads.js"></script>
+@endsection

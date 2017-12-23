@@ -15,3 +15,9 @@ Route::get('/', function () {
     return view('threads.index');
 });
 
+Route::get('/threads/{id}', function () {
+    $result = \App\Thread::findOrFail($id);
+    return view('threads.view', compact('result'));
+});
+
+
